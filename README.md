@@ -10,6 +10,7 @@ A Python-based voice assistant inspired by Iron Man's JARVIS, built with Speech 
 - 😂 Tell jokes
 - ⏰ Current time & date
 - 🤖 AI-powered responses via Gemini
+- 📰 Latest news headlines
 
 ## 🛠️ Tech Stack
 - Python
@@ -17,6 +18,7 @@ A Python-based voice assistant inspired by Iron Man's JARVIS, built with Speech 
 - Google Gemini AI
 - gTTS + Pygame
 - OpenWeatherMap API
+- NewsAPI
 
 ## 🚀 Setup
 1. Clone the repo
@@ -27,3 +29,19 @@ A Python-based voice assistant inspired by Iron Man's JARVIS, built with Speech 
 ## 📝 Environment Variables
 GEMINI_API_KEY=your_key
 OPENWEATHER_API_KEY=your_key
+NEWS_API_KEY=your_key
+
+## 🗣️ Voice Commands
+| Command | Action |
+|---------|--------|
+| "open google" | Opens Google |
+| "open youtube" | Opens YouTube |
+| "open github" | Opens GitHub |
+| "open mail" | Opens Gmail |
+| "play [song]" | Plays song from library |
+| "weather in [city]" | Weather of any city |
+| "latest news" | Top headlines |
+| "tell me a joke" | Tells a joke |
+| "what's the time" | Current time |
+| "what's the date" | Today's date |
+| "anything else" | Gemini AI answers |
