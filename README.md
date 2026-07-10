@@ -27,8 +27,8 @@ A Python-based voice assistant inspired by Iron Man's JARVIS, built with Speech 
 4. Run: `python main.py`
 
 ## 📝 Environment Variables
-GEMINI_API_KEY=your_key
-OPENWEATHER_API_KEY=your_key
+GEMINI_API_KEY=your_key,
+OPENWEATHER_API_KEY=your_key,
 NEWS_API_KEY=your_key
 
 ## 🗣️ Voice Commands
