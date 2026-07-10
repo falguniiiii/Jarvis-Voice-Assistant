@@ -104,7 +104,7 @@ def processCommand(c):
 
     elif "weather" in c.lower():
         api_key = os.getenv("OPENWEATHER_API_KEY")
-        city = "Agra"
+        city = "Delhi"
         url = f"https://api.openweathermap.org/data/2.5/weather?q={city}&appid={api_key}&units=metric"
         data = requests.get(url).json()
         if data.get("main"):
@@ -112,7 +112,21 @@ def processCommand(c):
             description = data["weather"][0]["description"]
             speak(f"The current temperature in {city} is {temp}°C with {description}.")
         else:
-            speak("Sorry, I couldn't fetch the weather information right now, please try again later.")    
+            speak("Sorry, I couldn't fetch the weather information right now, please try again later.")  
+
+    elif "news" in c.lower():
+        news_api_key = os.getenv("NEWS_API_KEY")
+        url = f"https://newsapi.org/v2/top-headlines?language=en&apiKey={news_api_key}"
+        data = requests.get(url).json()
+        articles = data.get("articles", [])
+        if articles:
+            speak("Here are the top news headlines:")
+            for i, article in enumerate(articles[:5]):
+                speak(article["title"])
+                if i < 4:
+                    speak("Next headline.")
+        else:
+            speak("Could not fetch news right now")
 
     else:
         #let OpenAI handle the request
