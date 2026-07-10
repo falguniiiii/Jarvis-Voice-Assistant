@@ -103,8 +103,14 @@ def processCommand(c):
         speak(joke)  
 
     elif "weather" in c.lower():
+
+        # take the city name from the command, if not specified, uses a default city
+        if "in" in c.lower():
+            city = c.lower().split("in")[-1].strip()
+        else:
+            city = "delhi" # default city if not specified
+
         api_key = os.getenv("OPENWEATHER_API_KEY")
-        city = "Delhi"
         url = f"https://api.openweathermap.org/data/2.5/weather?q={city}&appid={api_key}&units=metric"
         data = requests.get(url).json()
         if data.get("main"):
