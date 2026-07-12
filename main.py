@@ -9,6 +9,7 @@ import os
 import datetime
 import pyjokes
 import requests
+import psutil
 from dotenv import load_dotenv
 load_dotenv()
 
@@ -133,6 +134,15 @@ def processCommand(c):
                     speak("Next headline.")
         else:
             speak("Could not fetch news right now")
+
+    elif "battery" in c.lower():
+        battery = psutil.sensors_battery()
+        percent = battery.percent
+        plugged = battery.power_plugged
+        if plugged:
+            speak(f"Battery is at {percent} percent and is charging.")
+        else:
+            speak(f"Battery is at {percent} percent and is not charging.")
 
     else:
         #let OpenAI handle the request
