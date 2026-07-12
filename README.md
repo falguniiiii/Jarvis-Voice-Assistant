@@ -11,6 +11,7 @@ A Python-based voice assistant inspired by Iron Man's JARVIS, built with Speech 
 - ⏰ Current time & date
 - 🤖 AI-powered responses via Gemini
 - 📰 Latest news headlines
+- 🔋 Battery status
 
 ## 🛠️ Tech Stack
 - Python
@@ -45,3 +46,4 @@ NEWS_API_KEY=your_key
 | "what's the time" | Current time |
 | "what's the date" | Today's date |
 | "anything else" | Gemini AI answers |
+| "battery status" | Battery percentage & charging status |
