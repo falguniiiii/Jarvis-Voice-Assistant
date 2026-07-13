@@ -12,6 +12,7 @@ A Python-based voice assistant inspired by Iron Man's JARVIS, built with Speech 
 - 🤖 AI-powered responses via Gemini
 - 📰 Latest news headlines
 - 🔋 Battery status
+- 📸 Takes screenshots (saves to desktop)
 
 ## 🛠️ Tech Stack
 - Python
@@ -47,3 +48,4 @@ NEWS_API_KEY=your_key
 | "what's the date" | Today's date |
 | "anything else" | Gemini AI answers |
 | "battery status" | Battery percentage & charging status |
+| "take a screenshot" | Takes screenshot & saves to desktop |
