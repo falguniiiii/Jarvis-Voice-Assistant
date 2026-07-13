@@ -105,11 +105,13 @@ def processCommand(c):
         speak(joke)  
     
     elif "screenshot" in c.lower():
-        import datetime
-        filename = f"screenshot_{datetime.datetime.now().strftime('%Y%m%d_%H%M%S')}.png"
-        path = os.path.join(os.path.expanduser("~"), "Desktop", filename)
-        pyautogui.screenshot(path)
-        speak(f"Screenshot taken and saved as {filename} on Desktop.")
+           import datetime
+           filename = f"screenshot_{datetime.datetime.now().strftime('%Y%m%d_%H%M%S')}.png"
+           downloads = os.path.join(os.path.expanduser("~"), "Downloads")
+           os.makedirs(downloads, exist_ok=True)
+           path = os.path.join(downloads, filename)
+           pyautogui.screenshot(path)
+           speak(f"Screenshot taken and saved as {filename} in Downloads folder.")
 
     elif "weather" in c.lower():
 
