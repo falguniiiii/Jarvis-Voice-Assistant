@@ -10,6 +10,7 @@ import datetime
 import pyjokes
 import requests
 import psutil
+import pyautogui
 from dotenv import load_dotenv
 load_dotenv()
 
@@ -102,6 +103,13 @@ def processCommand(c):
     elif "joke" in c.lower():
         joke = pyjokes.get_joke()
         speak(joke)  
+    
+    elif "screenshot" in c.lower():
+        import datetime
+        filename = f"screenshot_{datetime.datetime.now().strftime('%Y%m%d_%H%M%S')}.png"
+        path = os.path.join(os.path.expanduser("~"), "Desktop", filename)
+        pyautogui.screenshot(path)
+        speak(f"Screenshot taken and saved as {filename} on Desktop.")
 
     elif "weather" in c.lower():
 
