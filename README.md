@@ -17,7 +17,7 @@ A Python-based voice assistant inspired by Iron Man's JARVIS, built with Speech 
 ## 🛠️ Tech Stack
 - Python
 - SpeechRecognition + PyAudio
-- Google Gemini AI
+- Google Gemini AI API
 - gTTS + Pygame
 - OpenWeatherMap API
 - NewsAPI
